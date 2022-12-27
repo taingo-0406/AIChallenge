@@ -21,9 +21,9 @@ def POINTS(event, x, y, flags, param):
 cv2.namedWindow('FRAME')
 cv2.setMouseCallback('FRAME', POINTS)
 
-area1 = [(43,335), (208,440), (177,451), (16,348)]
+area1 = [(23,313), (208,440), (177,451), (0,330)]
 area2 = [(523,333), (696,396), (674,411), (500,343)]
-
+ 
 area_1 = set()
 area_2 = set()
 while True:
@@ -73,8 +73,8 @@ while True:
     a1 = len(area_1)
     a2 = len(area_2)
 
-    cv2.putText(frame, str(a1), (115,546), cv2.FONT_HERSHEY_PLAIN, 3, (255,255,255), 2)
-    cv2.putText(frame, str(a2), (419,546), cv2.FONT_HERSHEY_PLAIN, 3, (255,255,255), 2)
+    cv2.putText(frame, str(a1), (63,400), cv2.FONT_HERSHEY_PLAIN, 3, (255,255,255), 2)
+    cv2.putText(frame, str(a2), (572,395), cv2.FONT_HERSHEY_PLAIN, 3, (255,255,255), 2)
 
     cv2.imshow("FRAME",frame)
     if cv2.waitKey(100)&0xFF==ord('q'):
